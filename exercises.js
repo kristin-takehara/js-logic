@@ -29,7 +29,6 @@ If/else statements = Evaluates (or checks) a condition. If the condition is true
  * The function will return true if the number passed into the function is equal to or greater than Hawaii's voting age. Console.log your result.
 */
 
-
 function canVote(age){
   if (age >= 18){
   return true;
@@ -37,7 +36,7 @@ function canVote(age){
   return false;
 }
 }
-console.log(canVote(12));
+console.log("1) Can vote:", canVote(12));
 
 /*
  * #2
@@ -56,7 +55,7 @@ function login(password){
     return "Login Success!";
   }
 }
-console.log(login("test1234"));
+console.log("2) Test:", login("test1234"));
 
 /*
  * #3
@@ -76,7 +75,7 @@ function isGreaterThan(first, second){
     return true;
   }
 }
-console.log(isGreaterThan(10, 5));
+console.log("3) Is Greater Than:", isGreaterThan(10, 5));
 
 /*
  * #4
@@ -95,7 +94,7 @@ function mustBeTrue(boo){
     return true;
   }
 }
-console.log(mustBeTrue(5>3));
+console.log("4) Must Be True:", mustBeTrue(5>3));
 
 /*
  * #5
@@ -109,12 +108,12 @@ console.log(mustBeTrue(5>3));
  * Console.log your result.
 */
 
-function bigBird (word){
+function bigBird(word){
   if (word.length === 3){
-    return "Word to Big Bird!"
+    return "Word to Big Bird!";
   }
 }
-console.log(bigBird("dogg"));
+console.log("5) Big Bird:", bigBird("dogg"));
 
 /*
  * #6
@@ -129,6 +128,14 @@ console.log(bigBird("dogg"));
  * Console.log your result.
 */
 
+function isEqual(first, second) {
+  if (first === second){
+    return "You look mahvelous!";
+  }else{
+    return "I don't know who you are anymore.";
+  }
+}
+console.log("6) Is Equal:", isEqual("Beautiful", "Ugly"));
 
 /*
  * #7
@@ -143,6 +150,14 @@ console.log(bigBird("dogg"));
  * Console.log your result.
 */
 
+function notEqual(first, second){
+  if (first !== second){
+    return "Opposites do attract.";
+    }else{
+        return "Cause it's like you're my mirror.";
+    }
+}
+console.log("7) Not Equal:", notEqual("Beautiful", "Ugly"));
 
 /*
  * #8
@@ -156,7 +171,14 @@ console.log(bigBird("dogg"));
  * Console.log your result.
 */ 
 
-
+function spareChange(money){
+  if (money >100){
+    return "true";   
+  }else{
+    return "false";
+  }
+}
+console.log("8) Spare Change:", spareChange(5));
 
 /*
  * #9
@@ -172,10 +194,17 @@ console.log(bigBird("dogg"));
  * Console.log your result.
 */ 
 
-
+function dirty30(one, two, three){
+  if ((one + two + three) >30){
+    return "true";
+  }else{
+    return "false";
+  }
+}
+console.log("9) Dirty30:", dirty30(1, 2, 3));
 
 /*
- * #10
+ * #10 <<<<<<===========NEED TO COMPLETE!!!
  * Function - evenStevens
  * Create a function named `evenStevens` which takes a parameter: `num`.
  *
@@ -186,8 +215,14 @@ console.log(bigBird("dogg"));
  * Console.log your result.
 */ 
 
-
-
+function evenStevens(num){
+  if (num === []){
+    return "true";
+  }else{
+    return "false";
+  }
+}
+console.log("10) Even Stevens:", evenStevens(2));
 
 /*
  * #11
@@ -202,6 +237,14 @@ console.log(bigBird("dogg"));
  * Console.log your result.
 */ 
 
+function daClub(cover, age){
+  if (cover && age >=21){
+    return "Welcome to the Legends Lounge.";
+  }else{
+    return "Chuck E Cheese is across the street.";
+  }
+}
+console.log("11) Da CLub:", daClub(10, 21));
 
 /*
  * #12
@@ -216,7 +259,14 @@ console.log(bigBird("dogg"));
  * Console.log your result.
 */ 
 
-
+function graduation(credits, thesis){
+  if (credits || thesis){
+    return "Congratulations on a job well done.";
+  }else{
+    return "See you in summer school.";
+  }
+}
+console.log("12) Graduation:", graduation(132, false));
 
 /*
  * #13
@@ -230,6 +280,18 @@ console.log(bigBird("dogg"));
  * Console.log your result.
 */ 
 
+function moneyTrain(speed){
+  if (speed <50){
+    return "You are riding Honolulu's Rail.";
+  }
+  if (speed <100){
+    return "You are riding Amtrak.";
+  }
+  if (speed >=100){
+    return "Now you ballin' in the Shinkansen!";
+  }
+}
+console.log("13) Money Train:", moneyTrain(120));
 
 /*
  * #14
@@ -244,9 +306,15 @@ console.log(bigBird("dogg"));
  * Invoke your function again.
  * Console.log budget and doughnutBought again.
 */ 
+var budget = 25;
+var doughnutPrice = 5;
+var doughnutBought = 0;
+console.log(budget, doughnutPrice, doughnutBought);
 
-
-
+function buyDoughnut(){
+  return (budget - doughnutPrice), (doughnutBought + 1);
+}
+console.log("14) Buy Doughtnut:", buyDoughnut());
 
 
 /*
