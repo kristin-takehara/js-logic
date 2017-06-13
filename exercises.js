@@ -31,10 +31,10 @@ If/else statements = Evaluates (or checks) a condition. If the condition is true
 
 function canVote(age){
   if (age >= 18){
-  return true;
-}else{
-  return false;
-}
+    return true;
+  }else{
+    return false;
+  }
 }
 console.log("1) Can vote:", canVote(12));
 
@@ -51,7 +51,7 @@ console.log("1) Can vote:", canVote(12));
 */
 
 function login(password){
-  if (password = "test1234") {
+  if (password === "test1234"){
     return "Login Success!";
   }
 }
@@ -196,9 +196,9 @@ console.log("8) Spare Change:", spareChange(5));
 
 function dirty30(one, two, three){
   if ((one + two + three) >30){
-    return "true";
+    return true;
   }else{
-    return "false";
+    return false;
   }
 }
 console.log("9) Dirty30:", dirty30(1, 2, 3));
@@ -238,7 +238,7 @@ console.log("10) Even Stevens:", evenStevens(2));
 */ 
 
 function daClub(cover, age){
-  if (cover && age >=21){
+  if (cover >= 21 && age >= 21){
     return "Welcome to the Legends Lounge.";
   }else{
     return "Chuck E Cheese is across the street.";
@@ -260,7 +260,7 @@ console.log("11) Da CLub:", daClub(10, 21));
 */ 
 
 function graduation(credits, thesis){
-  if (credits || thesis){
+  if (credits >= 120 || thesis >= 120){
     return "Congratulations on a job well done.";
   }else{
     return "See you in summer school.";
@@ -283,11 +283,9 @@ console.log("12) Graduation:", graduation(132, false));
 function moneyTrain(speed){
   if (speed <50){
     return "You are riding Honolulu's Rail.";
-  }
-  if (speed <100){
+  }else if (speed <100){
     return "You are riding Amtrak.";
-  }
-  if (speed >=100){
+  }else{
     return "Now you ballin' in the Shinkansen!";
   }
 }
@@ -312,8 +310,8 @@ var doughnutBought = 0;
 console.log("14) Variable Values:", budget, doughnutPrice, doughnutBought);
 
 function buyDoughnut(){
-  if (budget >= doughnutPrice) { 
-  budget -= doughnutPrice;
+  if (budget >= doughnutPrice){ 
+  budget -= doughnutPrice;// budget = budget - doughnut price//
   doughnutBought++;
  }
 }
@@ -322,6 +320,9 @@ buyDoughnut();
 console.log("14a) Budget:", budget);
 console.log("14b) Bought:", doughnutBought);
 
+buyDoughnut();
+console.log("14a) Budget:", budget);
+console.log("14b) Bought:", doughnutBought);
 
 
 /*
@@ -351,13 +352,19 @@ for (var i = 0; i<toyotaModels.length; i++){
  * "Player: 5"
 */
 
+for(var i = 1; i < 6; i++) {
+  console.log("Player: " + i);
+}
+
 
 /* 
  * #16
  * Create a for loop that will iterate and console.log each item in the array below:
 */
   var myFavFoods = ["lemon bar", "carrot cake", "nachos", "bacon cheeseburger", "ramen", "sweet potato fries", "chimichanga"];
-
+for(var i = 0; i < myFavFoods.length; i++){
+  console.log(myFavFoods[i]);
+}
 
 /*
  * #17
@@ -374,7 +381,17 @@ for (var i = 0; i<toyotaModels.length; i++){
  * Console.log your result.
 */
 
+var numArray = [1, 2, 3, 4, 5];
+var total = 0;// total = total + numArr[i]
 
+function sumItUp(arr){
+  for(var i = 0; i < arr.length; i++){
+  total += arr[i];
+  }
+  return total;
+}
+sumItUp(numArray);
+console.log(total);
 
 /*
  * #18
