@@ -51,7 +51,7 @@ console.log("1) Can vote:", canVote(12));
 */
 
 function login(password){
-  if (password = "test1234"){
+  if (password = "test1234") {
     return "Login Success!";
   }
 }
@@ -204,7 +204,7 @@ function dirty30(one, two, three){
 console.log("9) Dirty30:", dirty30(1, 2, 3));
 
 /*
- * #10 <<<<<<===========NEED TO COMPLETE!!!
+ * #10
  * Function - evenStevens
  * Create a function named `evenStevens` which takes a parameter: `num`.
  *
@@ -216,10 +216,10 @@ console.log("9) Dirty30:", dirty30(1, 2, 3));
 */ 
 
 function evenStevens(num){
-  if (num === []){
-    return "true";
+  if ((num/2) %0){
+    return true;
   }else{
-    return "false";
+    return false;
   }
 }
 console.log("10) Even Stevens:", evenStevens(2));
@@ -309,12 +309,19 @@ console.log("13) Money Train:", moneyTrain(120));
 var budget = 25;
 var doughnutPrice = 5;
 var doughnutBought = 0;
-console.log(budget, doughnutPrice, doughnutBought);
+console.log("14) Variable Values:", budget, doughnutPrice, doughnutBought);
 
 function buyDoughnut(){
-  return (budget - doughnutPrice), (doughnutBought + 1);
+  if (budget >= doughnutPrice) { 
+  budget -= doughnutPrice;
+  doughnutBought++;
+ }
 }
-console.log("14) Buy Doughtnut:", buyDoughnut());
+
+buyDoughnut();
+console.log("14a) Budget:", budget);
+console.log("14b) Bought:", doughnutBought);
+
 
 
 /*
